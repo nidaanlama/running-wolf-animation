@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+ #div1{
+ float: left;
+ width: 160px;
+ height: 184px;
+ margin: 10px;
+ padding: 10px;
+ }
+ #resim{
+ position:absolute;
+ }
+</style>
+
+<script>
+    var animation_sayac=0;
+    var myVar = setInterval(draw, 150);
+
+    function draw() {
+    animation_sayac++;
+    if(animation_sayac==8)animation_sayac=1;
+
+    var elem = document.createElement("img");
+    elem.setAttribute("src", ""+animation_sayac+".png");
+    elem.setAttribute("height", "183");
+    elem.setAttribute("width", "160");
+    elem.setAttribute("id", "resim");
+    document.getElementById("div1").appendChild(elem);
+ }
+</script>
+</head>
+
+<body>
+
+    <div id="div1"> </div>
+
+</body>
+</html> 
